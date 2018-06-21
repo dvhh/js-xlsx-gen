@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html>
-<body>
-	<script type="text/xml" id="workbook">
-<?xml version="1.0" encoding="UTF-8"?>
-<?mso-application progid="Excel.Sheet"?>
-<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet" xmlns:html="http://www.w3.org/TR/REC-html40">
-$content
-</Workbook>
-	</script>
-	<input type="file" multiple="multiple">
-	<button>start</button>
-	<script src="index.js"></script>
-</body>
+	<body>
+		<div style="max-width: 50em;width: 50%;min-width: 10em;position: relative;display: none">
+			<select size="5" multiple="multiple" id="files" style="width: 100%"
+				data-button-addFile-id="addFile"
+				data-button-renameFile-id="renameFile"
+				data-button-deleteFile-id="deleteFile"
+				data-button-convert-id="convert"
+				class="csvConverter">
+			</select><br/>
+			<div style="position: relative;">
+				<button id="addFile" autofocus="autofocus" accesskey="a"><u>A</u>dd file(s)</button>
+				<button id="renameFile" accesskey="r" disabled="disabled"><u>R</u>ename</button>
+				<button id="deleteFile" accesskey="d" disabled="disabled" style="position: absolute;right: 0;top:2px;"><u>D</u>elete</button>
+			</div>
+			<button disabled="disabled" style="width: 100%" id="convert" accesskey="c"><u>C</u>onvert</button>
+		</div>
+		<noscript>
+			please enable javascript
+		</noscript>
+		<script src="index.js"></script>
+	</body>
 </html>
