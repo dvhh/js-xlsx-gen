@@ -1,4 +1,4 @@
-# js-xslx-gen - Pure javascript Excel XML Spreadsheet generator
+# js-xlsx-gen - Pure javascript Excel XML Spreadsheet generator
 
 Generate a [Excel XML Spreadsheet][1] file, using csv file chossen on the local machine
 
