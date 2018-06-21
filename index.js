@@ -1,5 +1,8 @@
 (function(){
 	"use strict";
+
+	/*------------------------------------------------------------------------*/
+
 	if (!String.prototype.encodeHTML) {
 		String.prototype.encodeHTML = function () {
 			return this
@@ -10,6 +13,8 @@
 				.replace(/'/g, '&apos;');
 		};
 	}
+
+	/*------------------------------------------------------------------------*/
 
 	let getCellType = function( input ) { return ( ( ( input == "" ) || isNaN( Number( input ) ) ) ? "String" : "Number" ); }
 	//let processCellData = function()
@@ -39,7 +44,7 @@
 				"</Workbook>"
 		);
 	};
-
+	/*------------------------------------------------------------------------*/
 	let download = function( data ) {
 		console.log(data);
 		if( navigator.msSaveBlob ) {
@@ -52,6 +57,7 @@
 		element.click();
 	}
 
+	/*------------------------------------------------------------------------*/
 	let setupButtonEventListener = function( targetId, event, handler ) {
 		if( typeof(targetId) == "undefined" ) { return; }
 		let button = document.getElementById(targetId);
@@ -165,6 +171,7 @@
 		);
 	};
 
+	/*------------------------------------------------------------------------*/
 	let targets = document.getElementsByClassName("csvConverter");
 	console.log(targets);
 
@@ -172,5 +179,6 @@
 		setupList(targets[i])
 	}
 
+	/*------------------------------------------------------------------------*/
 	document.getElementsByTagName("div")[0].style.display = "block";
 })()
